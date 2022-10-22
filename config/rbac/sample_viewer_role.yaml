@@ -1,0 +1,27 @@
+# permissions for end users to view samples.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: sample-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: kubebuilder-autoscaler
+    app.kubernetes.io/part-of: kubebuilder-autoscaler
+    app.kubernetes.io/managed-by: kustomize
+  name: sample-viewer-role
+rules:
+- apiGroups:
+  - example.com.example.com
+  resources:
+  - samples
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - example.com.example.com
+  resources:
+  - samples/status
+  verbs:
+  - get

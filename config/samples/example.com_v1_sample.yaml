@@ -1,0 +1,12 @@
+apiVersion: example.com.example.com/v1
+kind: Sample
+metadata:
+  labels:
+    app.kubernetes.io/name: sample
+    app.kubernetes.io/instance: sample-sample
+    app.kubernetes.io/part-of: kubebuilder-autoscaler
+    app.kuberentes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: kubebuilder-autoscaler
+  name: sample-sample
+spec:
+  # TODO(user): Add fields here

@@ -1,0 +1,16 @@
+domain: example.com
+layout:
+- go.kubebuilder.io/v3
+projectName: kubebuilder-autoscaler
+repo: example.com/sample-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: example.com
+  group: example.com
+  kind: Sample
+  path: example.com/sample-operator/api/v1
+  version: v1
+version: "3"
